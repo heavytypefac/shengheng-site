@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#edf6f2">
+  <meta name="description" content="声衡智鉴是深圳技术大学健康与环境工程学院团队研发的可穿戴嗓音健康研究平台，同步记录发声时的空气声与颈部体表振动。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="声衡智鉴 · 可穿戴嗓音健康研究平台">
+  <meta property="og:description" content="听见声音，看见振动。探索同一次发声的两种信号。">
+  <title>声衡智鉴 · 可穿戴嗓音健康研究平台</title>
+  <link rel="icon" type="image/webp" href="./assets/img/logo-mark-96.webp">
+  <link rel="stylesheet" href="./assets/tailwind.css">
+  <link rel="stylesheet" href="./assets/site.css">
+  <script src="./assets/site.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <div class="shell header-inner flex items-center justify-between">
+      <a class="brand inline-flex items-center" href="#top" aria-label="声衡智鉴，返回顶部">
+        <img src="./assets/img/logo-mark-96.webp" width="40" height="40" alt="">
+        <span>声衡智鉴</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">菜单<span class="hamburger" aria-hidden="true"></span></button>
+      <nav class="site-nav flex items-center" id="site-nav" aria-label="主导航">
+        <a href="#system">核心系统</a>
+        <a href="#signals">声振演示</a>
+        <a href="#gallery">研发图集</a>
+        <a href="#progress">阶段成果</a>
+        <a class="mobile-contact" href="#contact">交流合作</a>
+      </nav>
+      <a class="header-contact inline-flex items-center" href="#contact">交流合作<span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell">
+        <div class="hero-layout grid items-center">
+          <div class="hero-copy">
+            <p class="hero-label inline-flex items-center"><span aria-hidden="true"></span>可穿戴嗓音健康研究平台</p>
+            <h1 id="hero-title">听见声音，<br><em>看见振动。</em></h1>
+            <p class="hero-description">一次发声，两路记录。声衡智鉴配对采集空气声与颈部体表振动，为高频用嗓人群的嗓音健康监测与辅助筛查研究提供数据。</p>
+            <div class="hero-actions flex flex-wrap">
+              <a class="button button-solid" href="#signals">体验声振演示<span aria-hidden="true">↘</span></a>
+              <a class="button button-outline" href="#system">了解采集系统<span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <figure class="hero-frame overflow-hidden">
+            <div class="frame-heading flex items-center justify-between">
+              <span class="frame-title"><i aria-hidden="true"></i>双模态穿戴系统</span>
+              <span class="frame-id" lang="en">MIC / ACC</span>
+            </div>
+            <div class="hero-media">
+              <img src="./assets/img/hero-960.webp" srcset="./assets/img/hero-480.webp 480w, ./assets/img/hero-960.webp 960w, ./assets/img/hero-1440.webp 1440w"
+                sizes="(max-width: 650px) calc(100vw - 36px), (max-width: 900px) calc(100vw - 72px), (max-width: 1280px) 52vw, 680px"
+                width="1440" height="960" alt="分体腰夹式概念设计，包括头戴麦克风、带振动采集模块的深蓝颈带与白色腰夹主机" fetchpriority="high" decoding="async">
+            </div>
+            <figcaption class="frame-footer flex items-center justify-between">
+              <span>产品概念图</span>
+              <span>头戴麦克风 · 颈部传感器 · 腰夹主机</span>
+            </figcaption>
+          </figure>
+        </div>
+        <dl class="hero-specs grid grid-cols-2 md:grid-cols-4">
+          <div><dt>配对记录</dt><dd><strong>2</strong> 路声振信号</dd></div>
+          <div><dt>样机连接方式</dt><dd><strong>USB / BLE</strong></dd></div>
+          <div><dt>研究工具</dt><dd><strong>VibScope</strong></dd></div>
+          <div><dt>项目阶段</dt><dd>科研原型<span class="spec-dot" aria-hidden="true"></span></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section system-section" id="system" aria-labelledby="system-title">
+      <div class="shell">
+        <header class="section-heading">
+          <div>
+            <p class="section-label">核心系统</p>
+            <h2 id="system-title">同一次发声，<br>留下两种信号。</h2>
+          </div>
+          <p>面向教师、播音员、歌手、客服等高频用嗓人群，项目探索用可穿戴设备记录发声任务，让声音与颈部振动可以配对观察。</p>
+        </header>
+        <div class="system-layout grid">
+          <a class="wear-card media-link" href="./assets/img/wearable-1200.webp" data-preview="分体腰夹式穿戴示意" data-caption="穿戴概念图，展示头戴麦克风、颈部体表采集模块和腰夹装置的位置。">
+            <img src="./assets/img/wearable-560.webp" alt="概念图中的穿戴者佩戴耳麦和颈带，两个感知端连接腰侧主机" width="560" height="722" loading="lazy" decoding="async">
+            <span class="wear-caption">穿戴概念图<span class="zoom-mark" aria-hidden="true">↗</span></span>
+          </a>
+          <div class="system-stack grid">
+            <article class="sensor-card sensor-mic">
+              <div class="sensor-top flex items-center justify-between"><span class="channel-tag"><i aria-hidden="true"></i>空气声</span><span class="channel-code">MIC</span></div>
+              <h3>头戴麦克风</h3>
+              <p>在口侧记录经空气传播的声音，保留发声的时间与频率特征。</p>
+            </article>
+            <article class="sensor-card sensor-acc">
+              <div class="sensor-top flex items-center justify-between"><span class="channel-tag"><i aria-hidden="true"></i>体表振动</span><span class="channel-code">ACC</span></div>
+              <h3>颈部加速度传感器</h3>
+              <p>贴近颈前皮肤，记录发声时传到颈部体表的机械振动。</p>
+            </article>
+            <div class="system-flow">
+              <h3>从采集到回看</h3>
+              <ol class="flow-list grid">
+                <li><span>01</span><strong>声振配对</strong><small>记录同一次发声</small></li>
+                <li><span>02</span><strong>传输与记录</strong><small>USB / 蓝牙</small></li>
+                <li><span>03</span><strong>回放与导出</strong><small>VibScope 研究端</small></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section signals-section" id="signals" aria-labelledby="signals-title">
+      <div class="shell">
+        <header class="section-heading">
+          <div><p class="section-label">声振演示</p><h2 id="signals-title">把声与振放在<br>同一条时间轴上。</h2></div>
+          <p>切换发声任务或拖动游标，观察两路波形随时间的变化。VibScope 研究端支持双通道显示、记录回放和导出。</p>
+        </header>
+        <div class="signal-layout grid">
+          <div class="signal-panel" id="signal-demo">
+            <div class="signal-toolbar flex flex-wrap items-center justify-between">
+              <div class="vowel-buttons inline-flex" role="group" aria-label="选择示例发声">
+                <button type="button" data-vowel="a" aria-pressed="true">/a/</button>
+                <button type="button" data-vowel="i" aria-pressed="false">/i/</button>
+                <button type="button" data-vowel="u" aria-pressed="false">/u/</button>
+              </div>
+              <span class="example-label">合成示意数据</span>
+            </div>
+            <ul class="signal-legend flex flex-wrap">
+              <li class="signal-mic"><i aria-hidden="true"></i>空气声 <span>MIC</span></li>
+              <li class="signal-acc"><i aria-hidden="true"></i>颈部体表振动 <span>ACC</span></li>
+            </ul>
+            <canvas id="signal-canvas" width="760" height="240" role="img" aria-label="空气声与颈部体表振动的合成波形示意，上方为空气声，下方为体表振动，两路共用时间轴。">空气声与颈部体表振动共用同一时间轴。</canvas>
+            <div class="signal-scrubber flex items-center">
+              <button type="button" class="play-button" data-signal-play><span class="play-icon" aria-hidden="true"></span><span data-signal-play-label>播放</span></button>
+              <label class="sr-only" for="signal-time">示例时间轴</label>
+              <input id="signal-time" data-signal-time type="range" min="0" max="2000" step="10" value="820">
+              <output class="signal-clock" data-signal-clock for="signal-time">0.82 s</output>
+            </div>
+            <noscript><p class="signal-caption">开启 JavaScript 后可切换示例和移动游标。</p></noscript>
+          </div>
+          <aside class="research-panel">
+            <h3>用声音连接两类数据</h3>
+            <p>以两类数据共有的空气声为桥梁，探索把公开电声门图中的表征迁移到自采颈部振动信号。</p>
+            <div class="research-map" aria-label="公开空气声与电声门图，通过共有的空气声，与自采空气声和颈部振动对齐">
+              <div><span>公开数据</span><strong>空气声 <i>+</i> 电声门图</strong></div>
+              <span class="research-bridge">↓ <b>共有声音模态</b></span>
+              <div><span>自采数据</span><strong>空气声 <i>+</i> 颈部振动</strong></div>
+            </div>
+            <p class="research-note">跨模态对齐与嗓音特征分析处于研究验证阶段。</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery" aria-labelledby="gallery-title">
+      <div class="shell">
+        <header class="section-heading">
+          <div><p class="section-label">研发图集</p><h2 id="gallery-title">从结构设计到实物。</h2></div>
+          <p>查看穿戴样机、结构、采集板和软件界面。点击图片可放大。</p>
+        </header>
+        <div class="gallery-grid grid">
+          <a class="gallery-card gallery-primary media-link" href="./assets/img/prototype-1200.webp" data-preview="实验室穿戴实拍" data-caption="人台上的实验室样机实拍，用于检查传感器位置和线缆连接。">
+            <div class="gallery-image"><img src="./assets/img/prototype-560.webp" width="560" height="701" alt="实验室人台上佩戴的颈带与连接至口侧的麦克风" loading="lazy" decoding="async"></div>
+            <div class="gallery-caption"><div><h3>实验室穿戴实拍</h3><p>人台装配与走线</p></div><span class="zoom-mark" aria-hidden="true">↗</span></div>
+          </a>
+          <a class="gallery-card media-link" href="./assets/img/cad-1200.webp" data-preview="三模块外壳设计" data-caption="CAD 结构图，展示主机外壳、颈部振动传感器及麦克风模块的设计。">
+            <div class="gallery-image image-contain"><img src="./assets/img/cad-560.webp" width="560" height="170" alt="三个采集模块的外壳 CAD 设计示意" loading="lazy" decoding="async"></div>
+            <div class="gallery-caption"><div><h3>三模块外壳</h3><p>CAD 结构总览</p></div><span class="zoom-mark" aria-hidden="true">↗</span></div>
+          </a>
+          <a class="gallery-card media-link" href="./assets/img/pcb-960.webp" data-preview="早期采集板" data-caption="展会素材中的早期采集板三维预览，展示板上器件和接口。">
+            <div class="gallery-image image-contain pcb-image"><img src="./assets/img/pcb-560.webp" width="560" height="498" alt="带采集器件与插针接口的蓝色板卡三维图" loading="lazy" decoding="async"></div>
+            <div class="gallery-caption"><div><h3>早期采集板</h3><p>自研板卡三维预览</p></div><span class="zoom-mark" aria-hidden="true">↗</span></div>
+          </a>
+          <a class="gallery-card gallery-software media-link" href="./assets/img/vibscope-1200.webp" data-preview="VibScope 记录回放" data-caption="VibScope 软件界面中的空气声与体表振动波形回放，画面节选。">
+            <div class="gallery-image image-contain"><img src="./assets/img/vibscope-560.webp" width="560" height="284" alt="VibScope 双通道波形回放界面截图，显示空气声及振动波形" loading="lazy" decoding="async"></div>
+            <div class="gallery-caption"><div><h3>VibScope 研究端</h3><p>记录回放界面</p></div><span class="zoom-mark" aria-hidden="true">↗</span></div>
+          </a>
+          <a class="gallery-card media-link" href="./assets/img/exhibition-1200.webp" data-preview="青年科创活动现场" data-caption="展桌上的人台、采集设备与电脑，节选自项目展陈照片。">
+            <div class="gallery-image"><img src="./assets/img/exhibition-560.webp" width="560" height="287" alt="科创活动展桌上的人台和声振采集设备" loading="lazy" decoding="async"></div>
+            <div class="gallery-caption"><div><h3>青年科创活动</h3><p>设备演示局部</p></div><span class="zoom-mark" aria-hidden="true">↗</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section progress-section" id="progress" aria-labelledby="progress-title">
+      <div class="shell">
+        <header class="section-heading">
+          <div><p class="section-label">阶段成果</p><h2 id="progress-title">在采集和试戴中<br>改进原型。</h2></div>
+          <p>校内采集与体验问卷帮助团队改进声振记录流程，了解参与者试戴时优先关注的问题。</p>
+        </header>
+        <div class="progress-layout grid">
+          <div class="survey-summary">
+            <div class="summary-numbers grid grid-cols-2">
+              <div><strong>100<span>人</span></strong><p>校内采集参与者</p></div>
+              <div><strong>80<span>份</span></strong><p>体验问卷</p></div>
+            </div>
+            <div class="survey-intent">
+              <div class="ring" role="img" aria-label="体验问卷中 68 人，占 85%"><span>85<small>%</small></span></div>
+              <div><h3>愿意用于定期筛查</h3><p>80 份问卷中，68 人选择「比较愿意」或「非常愿意」。</p></div>
+            </div>
+          </div>
+          <figure class="survey-feedback">
+            <figcaption><h3>体验者优先关注的改进</h3><p>各项占 80 份体验问卷的比例</p></figcaption>
+            <ul class="survey-bars">
+              <li><span>贴合稳定性</span><div class="bar-track"><span style="--bar:36.25%"></span></div><strong>29 人</strong></li>
+              <li><span>材料与接触压力</span><div class="bar-track"><span style="--bar:33.75%"></span></div><strong>27 人</strong></li>
+              <li><span>长发、眼镜与衣领适配</span><div class="bar-track"><span style="--bar:30%"></span></div><strong>24 人</strong></li>
+            </ul>
+            <p class="data-note">数据来自 2026 年 11 月中期材料。问卷份数与校内采集人数分别统计。</p>
+          </figure>
+        </div>
+        <div class="milestones">
+          <h3>研发与实践历程</h3>
+          <ol class="timeline grid">
+            <li><time datetime="2026-07">2026.07</time><h4>全国竞赛三等奖</h4><p>第十一届全国大学生生物医学工程创新设计竞赛。</p></li>
+            <li><time datetime="2026-07-29">2026.07–08</time><h4>陕西乾县护嗓科普</h4><p>走访非遗传承人，了解用嗓需求并开展护嗓科普。</p><a href="https://caijing.chinadaily.com.cn/a/202609/01/WS6a969610e4b09a165c7875be.html">查看实践报道 ↗</a></li>
+            <li><time datetime="2026-10">2026.10–11</time><h4>工程原型迭代</h4><p>推进穿戴结构、采集硬件和双通道回放平台的联调。</p></li>
+            <li><span class="timeline-next">下一阶段</span><h4>验证与采集准备</h4><p>优化佩戴一致性与采集流程，推进临床前验证准备。</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="shell">
+      <div class="footer-main flex flex-wrap items-center justify-between">
+        <div>
+          <p class="section-label">交流合作</p>
+          <h2>声衡智鉴</h2>
+          <p>深圳技术大学健康与环境工程学院<br>国家级大学生创新创业训练计划项目</p>
+        </div>
+        <a class="button button-solid" href="mailto:hsee@sztu.edu.cn?subject=%E5%A3%B0%E8%A1%A1%E6%99%BA%E9%89%B4%E9%A1%B9%E7%9B%AE%E4%BA%A4%E6%B5%81">学院公开邮箱<span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-bottom flex flex-wrap items-center justify-between">
+        <p>项目处于科研原型阶段，临床适用性正在研究。</p>
+        <div class="footer-links flex flex-wrap"><a href="https://hsee.sztu.edu.cn/">学院官网 ↗</a><a href="#top">回到顶部 ↑</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="image-dialog" class="image-dialog" aria-labelledby="image-dialog-title">
+    <div class="dialog-header flex items-center justify-between">
+      <h2 id="image-dialog-title" data-image-title></h2>
+      <button type="button" data-image-close aria-label="关闭图片预览">×</button>
+    </div>
+    <img data-image-full alt="">
+    <div class="dialog-footer flex items-center justify-between">
+      <p data-image-caption></p>
+      <div class="dialog-buttons flex">
+        <button type="button" data-image-prev aria-label="上一张图片">←</button>
+        <button type="button" data-image-next aria-label="下一张图片">→</button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
