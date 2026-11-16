@@ -173,13 +173,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .research-bridge b { font-size: 11px; vertical-align: 2px; margin-left: 4px; }
 .research-panel .research-note { font-size: 12px; }
 
-.gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.gallery-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
 .gallery-card { border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); display: grid; grid-template-rows: minmax(0, 1fr) auto; }
-.gallery-primary { grid-row: span 2; }
-.gallery-image { height: clamp(160px, 17vw, 244px); background: #e8efeb; overflow: hidden; }
+.gallery-primary { grid-row: span 2; grid-column: span 2; }
+.gallery-image { height: clamp(112px, 13.2vw, 188px); background: #e8efeb; overflow: hidden; }
 .gallery-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
-.gallery-primary .gallery-image { height: 100%; min-height: 0; }
-.gallery-primary img { object-position: center 46%; }
+.gallery-primary .gallery-image { height: 100%; min-height: 0; background: #636d7d; }
+.gallery-primary img { object-fit: contain; }
+.gallery-primary:hover img { transform: none; }
 .image-contain img { object-fit: contain; }
 .pcb-image { padding: 10px; background: #e6efea; }
 .gallery-software .gallery-image { background: #e7efeb; }
@@ -307,8 +308,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .gallery-primary { grid-row: auto; grid-column: span 2; }
   .gallery-image { height: clamp(101px, 29vw, 160px); }
-  .gallery-primary .gallery-image { height: min(53vw, 256px); }
-  .gallery-primary img { object-position: center 75%; }
+  .gallery-primary .gallery-image { height: auto; aspect-ratio: 773 / 580; }
   .gallery-caption { padding: 9px 10px; }
   .gallery-caption h3 { font-size: 14px; }
   .gallery-caption p { font-size: 11px; }
