@@ -1,0 +1,133 @@
+.model-section {
+  --model-accent: var(--teal-deep, var(--teal-dark));
+  background: #eef6f3;
+  border-bottom: 1px solid var(--line);
+}
+
+.model-section .section-heading > p { max-width: 30em; }
+.model-cohorts, .model-results, .model-figure-grid { display: grid; gap: 14px; }
+.model-cohorts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.model-results { grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr); margin-top: 14px; }
+
+.model-cohort, .model-card {
+  min-width: 0;
+  padding: clamp(16px, 2.25vw, 27px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.model-cohort { background: rgb(255 255 255 / .67); }
+.model-cohort dt, .model-scope {
+  margin: 0 0 8px;
+  color: var(--model-accent);
+  font-size: 13px;
+  font-weight: 700;
+}
+.model-cohort dd { margin: 0; }
+.model-cohort p, .model-description, .model-footnote { color: var(--muted); }
+.model-cohort p { margin: 6px 0 0; font-size: 14px; }
+.model-data { display: flex; flex-wrap: wrap; gap: 3px 20px; }
+.model-data span { white-space: nowrap; }
+.model-data strong, .model-scores strong, .model-table td {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+}
+.model-data strong {
+  color: var(--ink);
+  font-size: clamp(26px, 3.9vw, 43px);
+  line-height: 1.2;
+  letter-spacing: -.055em;
+}
+.model-data small { color: var(--muted); font-size: 13px; }
+.model-card h3 { margin: 0; font-size: clamp(20px, 2.25vw, 28px); letter-spacing: -.035em; }
+.model-description { margin: 9px 0 0; font-size: 14px; line-height: 1.8; }
+
+.model-scores {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+  margin: 16px 0 0;
+}
+.model-scores div {
+  display: grid;
+  align-content: start;
+  gap: 4px;
+  padding: 11px clamp(6px, 1.1vw, 13px);
+  background: #edf6f1;
+  border-radius: 9px;
+}
+.model-scores dt { font-size: 12px; color: var(--muted); }
+.model-scores dd { margin: 0; }
+.model-scores strong {
+  color: var(--model-accent);
+  font-size: clamp(16px, 2vw, 27px);
+  letter-spacing: -.065em;
+  white-space: nowrap;
+}
+.model-footnote { margin: 13px 0 0; font-size: 12px; line-height: 1.7; }
+
+.model-table { width: 100%; margin-top: 12px; border-collapse: collapse; }
+.model-table :is(th, td) { padding: 7px 4px; border-bottom: 1px solid var(--line); }
+.model-table th { font-size: 13px; font-weight: 650; }
+.model-table thead th { color: var(--muted); }
+.model-table th:first-child { padding-left: 0; text-align: left; }
+.model-table :is(th, td):not(:first-child) { text-align: right; white-space: nowrap; }
+.model-table th:last-child, .model-table td:last-child { padding-right: 0; }
+.model-table td { min-width: 65px; font-size: 14px; }
+.model-table tr:last-child td, .model-table tr:last-child th { color: var(--model-accent); font-weight: 700; }
+.model-bar { display: block; height: 4px; margin-top: 2px; border-radius: 10px; background: #e5efe9; }
+.model-bar::before {
+  content: "";
+  display: block;
+  width: var(--model-value);
+  height: 100%;
+  border-radius: inherit;
+  background: var(--teal);
+}
+
+.model-validation-note {
+  margin: 14px 0 0;
+  padding: 13px 18px;
+  border-left: 2px solid var(--teal);
+  color: var(--muted);
+  background: rgb(255 255 255 / .7);
+  font-size: 14px;
+  line-height: 1.75;
+}
+.model-validation-note strong { color: var(--ink); }
+.model-figures { margin-top: 22px; }
+.model-figures summary {
+  width: fit-content;
+  padding: 5px 2px;
+  color: var(--model-accent);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.model-figure-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 10px; }
+.model-figure {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--white);
+}
+.model-figure img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: contain; }
+.model-figure-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 9px 12px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  font-weight: 700;
+}
+.model-figure:hover .model-figure-label { color: var(--model-accent); }
+
+@media (max-width: 920px) {
+  .model-results { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 650px) {
+  .model-cohorts, .model-figure-grid { grid-template-columns: minmax(0, 1fr); }
+  .model-validation-note { padding-inline: 12px; }
+}

@@ -12,6 +12,7 @@
   <link rel="icon" type="image/webp" href="./assets/img/logo-mark-96.webp">
   <link rel="stylesheet" href="./assets/tailwind.css">
   <link rel="stylesheet" href="./assets/site.css">
+  <link rel="stylesheet" href="./assets/model.css">
   <script src="./assets/site.js" defer></script>
 </head>
 <body id="top">
@@ -26,6 +27,7 @@
       <nav class="site-nav flex items-center" id="site-nav" aria-label="主导航">
         <a href="#system">核心系统</a>
         <a href="#signals">声振演示</a>
+        <a href="#model">模型进展</a>
         <a href="#gallery">研发图集</a>
         <a href="#progress">阶段成果</a>
         <a class="mobile-contact" href="#contact">交流合作</a>
@@ -150,6 +152,87 @@
             <p class="research-note">跨模态对齐与嗓音特征分析处于研究验证阶段。</p>
           </aside>
         </div>
+      </div>
+    </section>
+
+    <section class="section model-section" id="model" aria-labelledby="model-title">
+      <div class="shell">
+        <header class="section-heading">
+          <div>
+            <p class="section-label">模型进展 · <time datetime="2026-11">2026 年 11 月</time></p>
+            <h2 id="model-title">基于公开数据的模型评估</h2>
+          </div>
+          <p>已建立信号解析、同步截窗、滤波和特征提取流程，搭建一维卷积神经网络（1D-CNN）特征提取框架，开展空气声与电声门图的配对表征学习。</p>
+        </header>
+
+        <dl class="model-cohorts">
+          <div class="model-cohort">
+            <dt>公开 SVD · 空气声 + 电声门图（EGG）</dt>
+            <dd>
+              <div class="model-data"><span><strong>809</strong> <small>名受试者</small></span></div>
+              <p>源域分类研究子集，包括 681 名健康和 128 名喉炎受试者。</p>
+            </dd>
+          </div>
+          <div class="model-cohort">
+            <dt>自采信号 · 空气声 + 颈部振动（ACC）</dt>
+            <dd>
+              <div class="model-data">
+                <span><strong>99</strong> <small>名有效参与者</small></span>
+                <span><strong>2,945</strong> <small>条有效元音录音</small></span>
+              </div>
+              <p>已完成格式解析、双通道检查和有效性筛选。</p>
+            </dd>
+          </div>
+        </dl>
+
+        <div class="model-results">
+          <article class="model-card" aria-labelledby="model-source-title">
+            <p class="model-scope">公开 SVD · 809 人研究子集</p>
+            <h3 id="model-source-title">健康与喉炎语音分类</h3>
+            <p class="model-description">D1 模型以空气声与 EGG 的配对特征为输入。每一折按受试者划分训练与测试，同一人的多条样本只进入其中一侧。</p>
+            <dl class="model-scores">
+              <div><dt>AUROC</dt><dd><strong>0.7775</strong></dd></div>
+              <div><dt>平衡准确率</dt><dd><strong>69.53%</strong></dd></div>
+              <div><dt>AUPRC</dt><dd><strong>0.4879</strong></dd></div>
+            </dl>
+            <p class="model-footnote">以上为受试者级五折交叉验证均值。</p>
+          </article>
+
+          <article class="model-card" aria-labelledby="model-feature-title">
+            <p class="model-scope">公开 SVD · 806 人研究子集</p>
+            <h3 id="model-feature-title">发声特征组合对照</h3>
+            <p class="model-description">在同一子集上比较三种方案。基频（F0）单独使用，或分别加入倒谱峰突出度（CPP）残差、EGG 波形形态。各项数值为受试者级五折均值。</p>
+            <table class="model-table" aria-labelledby="model-feature-title">
+              <thead><tr><th scope="col">特征组合</th><th scope="col">AUROC</th><th scope="col">平衡准确率</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">仅 F0</th><td>0.6863<span class="model-bar" style="--model-value:68.63%" aria-hidden="true"></span></td><td>63.35%</td></tr>
+                <tr><th scope="row">F0 + CPP 残差</th><td>0.7398<span class="model-bar" style="--model-value:73.98%" aria-hidden="true"></span></td><td>65.38%</td></tr>
+                <tr><th scope="row">F0 + EGG 形态</th><td>0.8151<span class="model-bar" style="--model-value:81.51%" aria-hidden="true"></span></td><td>73.98%</td></tr>
+              </tbody>
+            </table>
+            <p class="model-footnote">两项实验使用各自的研究子集和评估方案，结果分别解读。</p>
+          </article>
+        </div>
+
+        <p class="model-validation-note"><strong>下一阶段</strong>　继续验证颈部振动信号，推进编码器自监督预训练和跨传感器特征对齐。自采 ACC 用于疾病筛查的效能仍待独立临床验证。</p>
+
+        <details class="model-figures">
+          <summary>查看评估图表</summary>
+          <div class="model-figure-grid">
+            <a class="model-figure media-link" href="./assets/img/algorithm-source-1400.webp" data-preview="809 人公开 SVD 分类评估" data-caption="Audio + EGG 配对特征 D1 模型，受试者级五折交叉验证均值。">
+              <img src="./assets/img/algorithm-source-800.webp" width="800" height="472" alt="公开 SVD 809 人分类评估的 AUROC、平衡准确率和 AUPRC" loading="lazy" decoding="async">
+              <span class="model-figure-label">公开库分类指标<span aria-hidden="true">↗</span></span>
+            </a>
+            <a class="model-figure media-link" href="./assets/img/algorithm-auroc-1400.webp" data-preview="806 人特征对照 · AUROC" data-caption="三种特征组合在同一 806 人研究子集上的 AUROC。误差线为五折标准差。">
+              <img src="./assets/img/algorithm-auroc-800.webp" width="800" height="435" alt="公开 SVD 806 人子集三种特征组合的 AUROC 均值和五折标准差" loading="lazy" decoding="async">
+              <span class="model-figure-label">特征组合 · AUROC<span aria-hidden="true">↗</span></span>
+            </a>
+            <a class="model-figure media-link" href="./assets/img/algorithm-balanced-1400.webp" data-preview="806 人特征对照 · 平衡准确率" data-caption="三种特征组合在同一 806 人研究子集上的平衡准确率。误差线为五折标准差。">
+              <img src="./assets/img/algorithm-balanced-800.webp" width="800" height="435" alt="公开 SVD 806 人子集三种特征组合的平衡准确率均值和五折标准差" loading="lazy" decoding="async">
+              <span class="model-figure-label">特征组合 · 平衡准确率<span aria-hidden="true">↗</span></span>
+            </a>
+          </div>
+        </details>
       </div>
     </section>
 
